@@ -1,7 +1,7 @@
 # Why I created this project
 
 <h3> I decided to do push ups every day for as long as i can, so i started tracking my "Push up journey" <br> in 
-samsung notes, but i wanted to save my progress to someplace where storing data is reliable.
+samsung notes, but i wanted to save my progress in someplace where storing data is reliable.
 
 The first thing that came to mind was Notion, as I was (and am) using it on daily basis.</h3>
 
