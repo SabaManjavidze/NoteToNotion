@@ -7,11 +7,11 @@ def convert_to_iso(year,month,day,time):
     return converted
 
 def format_pushups():
-    formated_arr=[]
     file = open("./private/note.txt","r")
     textLines=file.readlines()
+    formated_arr=[]
     year=""
-    for index,line in enumerate(textLines):
+    for i,line in enumerate(textLines):
         day=""
         month=""
         startTime=""
@@ -21,7 +21,7 @@ def format_pushups():
         if(line.startswith("year")==False):
             split_line=line.split(" - ")
             dayNmonth=split_line[0]
-            timeNcount=split_line[1]  #60,20  time: 1:45-2:04  didn't count\n
+            timeNcount=split_line[1]  # 60,20  time: 1:45-2:04  didn't count\n
 
             dayNmonthSplit=dayNmonth.split(" ")
             day=dayNmonthSplit[0]

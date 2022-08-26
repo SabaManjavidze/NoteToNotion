@@ -1,32 +1,21 @@
 
 
+import json
+from db_schema import CheckBoxType, DateType, NumberType, Schema, TitleType
+
+
 def format_to_notion(pushUps,start,end,didCount):
-    formated = {
-               "Push Ups":{
-                   "type":"title",
-                   "title": [{
-                       "type": "text",
-                       "text": {"content": pushUps},
-                   }],
-               },
-               "Date":{
-                   "type":"date",
-                   "date":{
-                       "start":start,
-                       "end":end
-                   }
-               },
-               "Did Count":{
-                   "type":"checkbox",
-                   "checkbox":didCount,
-               },
-        }
-    total_push_ups={
-            "type":"number"
-        }
     total_num=0
     for pushup in pushUps.split(","):
         total_num+=int(pushup)
-    total_push_ups["number"]=total_num
-    formated["Total Push Ups"]=total_push_ups
-    return formated
+    date = DateType(start,end)
+    pushUpsArr = TitleType(pushUps)
+    total_num_prop=NumberType(total_num)
+    did_count_prop=CheckBoxType(didCount)
+    formated = Schema(
+        date=date,
+        didCount=did_count_prop,
+        pushUps=pushUpsArr,
+        totalPushups=total_num_prop
+    )
+    return formated.values()

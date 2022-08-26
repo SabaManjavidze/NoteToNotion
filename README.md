@@ -14,6 +14,9 @@ The first thing that came to mind was Notion, as I was (and am) using it on dail
 ## Planning To Add :
 
 - <h4>A better way to add items to the Notion database (if possible)</h4>
+- <h4>Create a client where user can input either text or a file to add to the database</h4>
+- <h4>When populating the data check the data and if the date is not already added only then add the item <br>
+    to the database</h4>
 
 ## What my format looks like in Samsung Notes :
 

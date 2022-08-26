@@ -18,7 +18,7 @@ def populate_db():
     }
     db_file.close()
     entries=format_pushups()
-    for index,entry in enumerate(entries):
+    for entry in entries:
         body["properties"]=entry
         NOTION_SECRET=os.environ.get("NOTION_SECRET")
         headers={
@@ -29,4 +29,6 @@ def populate_db():
         }
         res = requests.post(f'https://api.notion.com/v1/pages',json=body,headers=headers)
         print(json.dumps(res.json(),indent=4))
+        if(res.status_code!=200):
+            return
 populate_db()

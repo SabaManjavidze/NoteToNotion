@@ -1,4 +1,3 @@
-from distutils import file_util
 import os
 from db_schema import db_schema
 import requests

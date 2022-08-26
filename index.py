@@ -1,6 +1,5 @@
-from create_db import create_db
-from dotenv import load_dotenv,find_dotenv
-load_dotenv(find_dotenv("./private/.env"))
+import create_db
 
-
-create_db()
+def main():
+    print("main")
+main()
